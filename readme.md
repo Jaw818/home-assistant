@@ -158,9 +158,12 @@ These sensors give a cleaner message for the dashboard, showing things like “i
 ## 🎨 The Cards
 
 ### Mobile Pop-up Version (Browser Mod):
+<img src="https://github.com/user-attachments/assets/4287169e-ac3d-4c00-8311-143ac0ea55a4" alt="Alt Text" width="450" height="800">
+
 📱 [Pop-up Birthday Card](https://github.com/Jaw818/home-assistant/blob/main/Popup%20Birthday%20Card)
 
 ### Wall Panel/Kiosk Version:
+![Birthdays Redacted Kiosk](https://github.com/user-attachments/assets/55661e3e-fad3-40ac-bb00-8da8df973daf)
 🖥 [Kiosk Birthday Card](https://github.com/Jaw818/home-assistant/blob/main/Kiosk%20Birthday%20Card)
 
 > I used AI-generated children for my demo pictures…because, well, Photoshop fatigue is real.
@@ -177,8 +180,10 @@ This automation checks if someone’s birthday is today and announces it via you
 > I trigger mine when I turn off my morning alarm!
 
 ### Push Notifications:
+![Screenshot_20250418_150353_One UI Home](https://github.com/user-attachments/assets/56c24cfb-0d95-4d4e-803d-84526fbfe451)
 
 📲 [Day-of Push Notification](https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Push%20Notifications)
+
 
 🌅 [Night Before Reminder](https://github.com/Jaw818/home-assistant/blob/main/Night%20Before%20Birthday%20Reminder)
 
