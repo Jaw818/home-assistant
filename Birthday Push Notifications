@@ -5,9 +5,11 @@ if:
       {{ now().strftime('%Y-%m-%d') ==
       states('sensor.calendar_birthday_schedules_date_1')}}
 then:
-  - action: notify.mobile_app_jake
+  - action: notify.mobile_app_1
     metadata: {}
     data:
       message: >-
         Today is {{states.sensor.calendar_birthday_schedules_msg_1.state}}s
         Birthday.
+      data:
+        icon_url: /local/png/cake.png
