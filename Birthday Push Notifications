@@ -1,0 +1,13 @@
+alias: Birthday 1
+if:
+  - condition: template
+    value_template: >-
+      {{ now().strftime('%Y-%m-%d') ==
+      states('sensor.calendar_birthday_schedules_date_1')}}
+then:
+  - action: notify.mobile_app_jake
+    metadata: {}
+    data:
+      message: >-
+        Today is {{states.sensor.calendar_birthday_schedules_msg_1.state}}s
+        Birthday.
