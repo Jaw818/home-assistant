@@ -1,0 +1,23 @@
+alias: Night Before Birthday Reminder
+description: ""
+triggers:
+  - trigger: time
+    at: "19:00:00"
+conditions: []
+actions:
+  - if:
+      - condition: state
+        entity_id: binary_sensor.birthday_tomorrow
+        state: "on"
+    then:
+      - action: notify.mobile_app_1
+        metadata: {}
+        data:
+          message: >-
+            Don't Forget, tomorrow is {{states('sensor.calendar_birthday_schedules_msg_1')}}'s Birthday!
+      - action: notify.mobile_app_2
+        metadata: {}
+        data:
+          message: >-
+             Don't Forget, tomorrow is {{states('sensor.calendar_birthday_schedules_msg_1')}}'s Birthday!
+mode: single
