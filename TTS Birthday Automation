@@ -9,7 +9,7 @@ then:
     metadata: {}
     data:
       cache: true
-      media_player_entity_id: media_player.home_group
+      media_player_entity_id: media_player.<your_smart_speaker>
       message: >-
         Today is {{states.sensor.calendar_birthday_schedules_msg_1.state}}s
         Birthday.
