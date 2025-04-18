@@ -11,7 +11,7 @@ you push and tts notifications regarding calendar events. After setting this up 
 
 #Requirements
 **Calendar is required, I prefer Google Calendar, but you can adapt this to your needs**
-- [Google Calendar] (http://home-assistant.io/integrations/google/)
+- [Google Calendar](http://home-assistant.io/integrations/google/)
 - [Generic Camera](https://www.home-assistant.io/integrations/generic/)
 - [Mushroom Card](https://github.com/piitaya/lovelace-mushroom)
 
@@ -76,11 +76,11 @@ Once you have created the 4 sensors, we will move onto the next.
 The next sensor is retreiving the date of the birthday on the calendar.
 Create them the same way as above, with the following information.
 
-[Birthday Date Sensor] (https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Date%20Sensor%20Templates)
+[Birthday Date Sensor](https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Date%20Sensor%20Templates)
 
 For the final 4 sensors provided by Berkansezer77, which will deteremine the number of days until the birthday, use the following:
 
-[Days Until Birthday Sensors] (https://github.com/Jaw818/home-assistant/blob/main/Days%20until%20Birthday%20Sensor%20Templates)
+[Days Until Birthday Sensors](https://github.com/Jaw818/home-assistant/blob/main/Days%20until%20Birthday%20Sensor%20Templates)
 
 #Still Sensors, but a little more fun
 As I mentioned before, it was important to get the birthday person's name out seperately. I will now explain why.
@@ -118,21 +118,21 @@ is in {{states('sensor.calendar_birthday_schedules_date_remain_1')}}
 #The Cards
 I replaced the photos of my friends and family with pictures of AI generated children. I got lazy when photoshopping, so the cards don't look perfect, I apologize.
 First I have the Pop-up card, using browser mod. This card is intended for mobile devices mostly.
-[Pop-up Birthday Card] (https://github.com/Jaw818/home-assistant/blob/main/Popup%20Birthday%20Card)
+[Pop-up Birthday Card](https://github.com/Jaw818/home-assistant/blob/main/Popup%20Birthday%20Card)
 
 This card is for wall panels and larger devices:
 
-[Kiosk Birthday Card] (https://github.com/Jaw818/home-assistant/blob/main/Kiosk%20Birthday%20Card)
+[Kiosk Birthday Card](https://github.com/Jaw818/home-assistant/blob/main/Kiosk%20Birthday%20Card)
 
 #Automations
 This first automation, uses a simple template to check to see if the birthday is occuring today, if it is, it will send a notification via TTS to your smart speakers.
 I did not provide the entire automation, only the choose action, that way you can set your own triggers. I personally, have it trigger when I turn my morning alarm off. 
 I also have the same automation setup to monitor each of the 4 birthdays, just incase 4 people have a birthday on the same day.
-[TTS Birthday Announcement] (https://github.com/Jaw818/home-assistant/blob/main/TTS%20Birthday%20Automation)
+[TTS Birthday Announcement](https://github.com/Jaw818/home-assistant/blob/main/TTS%20Birthday%20Automation)
 
 #Push Notifications:
 These follow the same logic as the TTS notifications.
-[Day of Birthday Notification] (https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Push%20Notifications)
+[Day of Birthday Notification](https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Push%20Notifications)
 
-This one requires the templating of a binary sensor. [Birthday Tomorrow Binary Sensor] (https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Binary%20Sensor)
-[Night/Day Before Notification] (https://github.com/Jaw818/home-assistant/blob/main/Night%20Before%20Birthday%20Reminder)
+This one requires the templating of a binary sensor. [Birthday Tomorrow Binary Sensor](https://github.com/Jaw818/home-assistant/blob/main/Birthday%20Binary%20Sensor)
+[Night/Day Before Notification](https://github.com/Jaw818/home-assistant/blob/main/Night%20Before%20Birthday%20Reminder)
