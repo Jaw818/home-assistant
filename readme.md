@@ -56,9 +56,12 @@ After reloading, you will find that you have a new entity, called "sensor.calend
 #Step 2: Breaking out the Data
 Still Courtsey of Berkansezer77, we will now be breaking out the data from sensor.calendar_scheduled_events.
 We will be making a total of 12 sensors through the UI in this section. If you have never templated a sensor through the UI, navigate to the helpers section in the settings, then add helper, then template, and select sensor.
+
 We will name the first sensor: "sensor.calendar_birthday_schedules_msg_1"
+
 We will then use this as the template.
 ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[0].summary | replace("'s Birthday", "") }}```
+
 If you did it correctly, you should now see the name of the person with the next birthday in your calendar. 
 
 The ```yaml | replace("'s Birthday","")``` porition will take the message from "Nicholas's Birthday" to just "Nicholas" which is vital for the photo part later in the project.
@@ -95,15 +98,17 @@ as they were using if statements to decide which photo to display, having over 7
 my way also prevents you from needing to change any yaml when you add a birthday to your calendar, only an image.
 
 I created 4 more sensors, with this information:
+
 Name: sensor.birthdayimg1
+
 Template: ```yaml /local/png/birthday/{{states('sensor.calendar_birthday_schedules_msg_1')}}.png ```
 
 Using this template, I am able to recieve back /local/png/birthday/Nicholas.png, which I have loaded into my local folder. But, it isn't exactly that simple.
 After creating the 4 sensors we will move onto how we will show these photos.
 
 #Generic Cameras
-We will now create 4 generic camera entities with the following URL:
-http://homeassistant:8123{{states('sensor.birthdayimg1')}}
+We will now create 4 generic camera entities with the following 
+URL: http://homeassistant:8123{{states('sensor.birthdayimg1')}}
 As long as you have images that match the sensor output, you should get it back.
 I then named these cameras Birthday 1 - 4.
 
