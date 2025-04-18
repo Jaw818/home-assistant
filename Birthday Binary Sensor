@@ -1,0 +1,10 @@
+{% set midnight = today_at() %}
+{% set event = states('sensor.calendar_birthday_schedules_date_1') | as_datetime | as_local %}
+{% set delta = event - midnight %}
+{% if delta.days == 0 %}
+  false
+{% elif delta.days == 1 %}
+  true
+{% else %}
+  false
+{% endif %}
