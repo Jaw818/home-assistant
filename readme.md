@@ -66,12 +66,15 @@ The ```yaml | replace("'s Birthday","")``` porition will take the message from "
 You will now need to create the same sensor, three additional times.
 
 Name: sensor.calendar_birthday_schedules_msg_2
+
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[1].summary | replace("'s Birthday", "") }}```
 
 Name: sensor.calendar_birthday_schedules_msg_3
+
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[2].summary | replace("'s Birthday", "") }} ```
 
 Name: sensor.calendar_birthday_schedules_msg_4
+
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[3].summary | replace("'s Birthday", "") }}```
 
 Once you have created the 4 sensors, we will move onto the next. 
