@@ -1,0 +1,173 @@
+type: custom:popup-card
+entity: sensor.birthdayimg1
+dismissable: true
+title: Birthdays
+size: fullscreen
+card:
+  square: true
+  type: grid
+  cards:
+    - type: custom:vertical-stack-in-card
+      cards:
+        - show_state: false
+          show_name: false
+          camera_view: auto
+          type: picture-entity
+          entity: sensor.birthday_state_1
+          image: https://demo.home-assistant.io/stub_config/bedroom.png
+          grid_options:
+            columns: 3
+            rows: 2
+          camera_image: camera.homeassistant_3
+          card_mod:
+            style: |
+              ha-card {
+              clip-path: circle(90px);
+              }
+        - type: custom:mushroom-template-card
+          primary: >
+            {{states('sensor.calendar_birthday_schedules_msg_1')
+            |replace("Stolz", "")}}'s Birthday
+          secondary: |
+            {{states('sensor.birthday_state_1')}}
+          grid_options:
+            columns: 6
+            rows: 1
+          layout: vertical
+          picture: ""
+          card_mod:
+            style: |
+              ha-card {
+              background: transparent !important;
+              border: 0px;
+              }
+      card_mod:
+        style: |
+          ha-card {
+          background: transparent !important;
+          border: 0px;
+          }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - show_state: false
+          show_name: false
+          camera_view: auto
+          type: picture-entity
+          entity: sensor.birthday_state_1
+          image: https://demo.home-assistant.io/stub_config/bedroom.png
+          grid_options:
+            columns: 3
+            rows: 2
+          camera_image: camera.homeassistant_2
+          card_mod:
+            style: |
+              ha-card {
+              clip-path: circle(90px);
+              }
+        - type: custom:mushroom-template-card
+          primary: >
+            {{states('sensor.calendar_birthday_schedules_msg_2')|replace("Stolz",
+            "")}}'s Birthday
+          secondary: |
+            {{states('sensor.birthday_state_2')}}
+          grid_options:
+            columns: 6
+            rows: 1
+          layout: vertical
+          picture: ""
+          card_mod:
+            style: |
+              ha-card {
+              background: transparent !important;
+              border: 0px;
+              }
+      card_mod:
+        style: |
+          ha-card {
+          background: transparent !important;
+          border: 0px;
+          }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - show_state: false
+          show_name: false
+          camera_view: auto
+          type: picture-entity
+          entity: sensor.birthday_state_1
+          image: https://demo.home-assistant.io/stub_config/bedroom.png
+          grid_options:
+            columns: 3
+            rows: 2
+          camera_image: camera.homeassistant
+          card_mod:
+            style: |
+              ha-card {
+              clip-path: circle(90px);
+              }
+        - type: custom:mushroom-template-card
+          primary: >
+            {{states('sensor.calendar_birthday_schedules_msg_3')|replace("Stolz",
+            "")}}'s Birthday
+          secondary: |
+            {{states('sensor.birthday_state_3')}}
+          grid_options:
+            columns: 6
+            rows: 1
+          layout: vertical
+          picture: ""
+          card_mod:
+            style: |
+              ha-card {
+              background: transparent !important;
+              border: 0px;
+              }
+      card_mod:
+        style: |
+          ha-card {
+          background: transparent !important;
+          border: 0px;
+          }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - show_state: false
+          show_name: false
+          camera_view: auto
+          type: picture-entity
+          entity: sensor.birthday_state_1
+          image: https://demo.home-assistant.io/stub_config/bedroom.png
+          grid_options:
+            columns: 3
+            rows: 2
+          camera_image: camera.homeassistant_4
+          card_mod:
+            style: |
+              ha-card {
+              clip-path: circle(90px);
+              }
+        - type: custom:mushroom-template-card
+          primary: >
+            {{states('sensor.calendar_birthday_schedules_msg_4')|replace("Stolz",
+            "")}}'s Birthday
+          secondary: |
+            {{states('sensor.birthday_state_4')}}
+          grid_options:
+            columns: 6
+            rows: 1
+          layout: vertical
+          picture: ""
+          card_mod:
+            style: |
+              ha-card {
+              background: transparent !important;
+              border: 0px;
+              }
+      card_mod:
+        style: |
+          ha-card {
+          background: transparent !important;
+          border: 0px;
+          }
+  grid_options:
+    columns: 18
+    rows: 3
+  columns: 2
