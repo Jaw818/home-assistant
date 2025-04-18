@@ -64,10 +64,13 @@ If you did it correctly, you should now see the name of the person with the next
 The ```yaml | replace("'s Birthday","")``` porition will take the message from "Nicholas's Birthday" to just "Nicholas" which is vital for the photo part later in the project.
 
 You will now need to create the same sensor, three additional times.
+
 Name: sensor.calendar_birthday_schedules_msg_2
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[1].summary | replace("'s Birthday", "") }}```
+
 Name: sensor.calendar_birthday_schedules_msg_3
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[2].summary | replace("'s Birthday", "") }} ```
+
 Name: sensor.calendar_birthday_schedules_msg_4
 Template: ``` yaml {{ state_attr('sensor.calendar_scheduled_events', 'scheduled_events')[3].summary | replace("'s Birthday", "") }}```
 
