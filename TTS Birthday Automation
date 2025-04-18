@@ -1,0 +1,17 @@
+alias: Birthday 1
+if:
+  - condition: template
+    value_template: >-
+      {{ now().strftime('%Y-%m-%d') ==
+      states('sensor.calendar_birthday_schedules_date_1')}}
+then:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.home_group
+      message: >-
+        Today is {{states.sensor.calendar_birthday_schedules_msg_1.state}}s
+        Birthday.
+    target:
+      entity_id: tts.home_assistant_cloud
